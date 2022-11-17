@@ -1,3 +1,56 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["plugin:react/recommended", "standard-with-typescript", "next", "prettier"],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "json", "import", "unused-imports"],
+    "rules": {
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    // 組み込みモジュール
+                    "builtin",
+                    // node_modules
+                    "external",
+                    // 内部モジュール
+                    "internal",
+                    ["parent", "sibling"],
+                    "object",
+                    "type",
+                    "index"
+                ],
+                // グループ毎にで改行を入れる
+                "newlines-between": "always",
+                "pathGroupsExcludedImportTypes": ["builtin"],
+                "alphabetize": {
+                    // 昇順にソート
+                    "order": "asc",
+                    // 小文字大文字を区別する
+                    "caseInsensitive": true
+                },
+                "pathGroups": [
+                    // 指定した順番にソートされる
+                    {
+                        "pattern": "@/components/common",
+                        "group": "internal",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@/components/hooks",
+                        "group": "internal",
+                        "position": "before"
+                    }
+                ]
+            }
+        ],
+        "unused-imports/no-unused-imports": "error"
+    }
 }

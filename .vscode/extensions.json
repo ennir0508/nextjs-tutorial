@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "dsznajder.es7-react-js-snippets",
+    "antn9x.nextjs-component-generator",
+    "pulkitgangwar.nextjs-snippets",
+    "rbbit.typescript-hero",
+    "orta.vscode-jest",
+    "mikestead.dotenv",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "ecmel.vscode-html-css",
+    "bradlc.vscode-tailwindcss",
+    "oderwat.indent-rainbow",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "steoates.autoimport",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "yzhang.markdown-all-in-one",
+    "ms-azuretools.vscode-docker"
+  ]
+}
